@@ -1,12 +1,12 @@
 # Shark_IP 🦈
 
 **Sense the drop of blood in the ocean.** A shark can detect a single drop of
-blood diluted in a vast body of water. Shark_IP does the same with information:
+blood diluted in a vast body of water. Shark_IP does the same with information :
 it surfaces *every piece of legally obtainable data* about a single IP address
-among billions — fast, clean, and **strictly passively**.
+among billions : fast, clean, and **strictly passively**.
 
 Shark_IP is a modular CLI that enriches one IP from several open sources in a
-**read-only** way. It never scans or probes the target host — it only reads
+**read-only** way. It never scans or probes the target host, it only reads
 public, third-party data *about* the address and prints a clean, categorized
 console report (powered by [`rich`](https://github.com/Textualize/rich)).
 
@@ -37,7 +37,7 @@ console report (powered by [`rich`](https://github.com/Textualize/rich)).
 | vpnapi.io | `VPNAPI_KEY` | yes | <https://vpnapi.io/dashboard> |
 | IKWYD (P2P history) | `IKWYD_API_KEY` | paid/trial | <https://iknowwhatyoudownload.com/en/api/> |
 
-Any module whose key is missing is **politely skipped** — the script never
+Any module whose key is missing is **politely skipped** , the script never
 crashes on a missing key or a failing source. The **IKWYD module is off by
 default**: it runs only when you explicitly provide its key.
 
@@ -63,8 +63,8 @@ python shark_ip.py 9.9.9.9 --timeout 15  # slower networks
 ### Setting your API keys
 
 You have two ways to store your keys. Both save them **locally** to a
-git-ignored `.env` file — they are never pushed and never leave your machine.
-Enter a key once; every later scan reuses it automatically.
+git-ignored `.env` file, they are never pushed and never leave your machine.
+Enter a key once ; every later scan reuses it automatically.
 
 **Option A — guided (recommended):**
 
@@ -83,12 +83,12 @@ cp .env.example .env     # Windows PowerShell: Copy-Item .env.example .env
 # then open .env in any text editor and paste your keys after the = signs
 ```
 
-Every key is optional: a module with no key is politely skipped, never fatal.
+Every key is optional : a module with no key is politely skipped, never fatal.
 
 ## Design notes
 
 - One function per source, each returning a normalized `ModuleResult`.
-- Strict error handling: a network error, bad JSON, or unexpected exception in
+- Strict error handling : a network error, bad JSON, or unexpected exception in
   one module is caught and reported, never fatal.
 - `--json` emits the raw structured result for piping into other tools.
 
@@ -112,7 +112,7 @@ assessment only**. By using it you accept the following.
 - Under EU law, an IP address can be **personal data**, and an IP combined with
   **activity history is personal data**, whether or not you tie it to a name
   (CJEU, *Breyer v. Germany*, C-582/14). Processing it engages the **GDPR** and
-  equivalent national laws.
+  equivalent national laws of your country.
 - The **P2P / torrent history module (IKWYD)** is the most sensitive part of
   this tool. It associates observed download activity with an address. It is
   **disabled by default** and must be switched on deliberately. Enable it only
