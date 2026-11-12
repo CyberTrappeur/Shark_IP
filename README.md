@@ -44,7 +44,7 @@ default**: it runs only when you explicitly provide its key.
 ## Install
 
 ```bash
-git clone https://github.com/<you>/Shark_IP.git
+git clone https://github.com/CyberTrappeur/Shark_IP.git
 cd Shark_IP
 pip install -r requirements.txt
 cp .env.example .env    # then fill in whatever keys you have
